@@ -9,4 +9,5 @@ dependencies = [
     "django-prometheus==2.2.0",
     "pillow==9.0.0",
     "psycopg2-binary==2.9.3",
+    "uwsgi>=2.0.30",
 ]
