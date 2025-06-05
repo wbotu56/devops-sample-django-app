@@ -25,14 +25,6 @@ ____
 ```shell
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-- install Python 3.8
-```shell
-uv python install 3.8
-```
-- pin Python version
-```shell
-uv python pin 3.8
-```
 
 - set environment export for variables (put them in .env file, for example):
 ```yaml
