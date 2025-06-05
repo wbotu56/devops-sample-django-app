@@ -5,8 +5,8 @@ all: migrate run
 setup:
 	curl -LsSf https://astral.sh/uv/install.sh | sh
 
-migrate:
+migrate: .env
 	uv run manage.py migrate
 
-run:
+run: .env
 	uv run uwsgi --ini uwsgi.ini
