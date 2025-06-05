@@ -28,12 +28,12 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 - set environment export for variables (put them in .env file, for example):
 ```yaml
-      DJANGO_DB_HOST=db
-      DJANGO_DB_NAME=app
-      DJANGO_DB_USER=worker
-      DJANGO_DB_PASS=worker
-      DJANGO_DB_PORT="5432"
-      DJANGO_DEBUG="False"
+DJANGO_DB_HOST=db
+DJANGO_DB_NAME=app
+DJANGO_DB_USER=worker
+DJANGO_DB_PASS=worker
+DJANGO_DB_PORT="5432"
+DJANGO_DEBUG="False"
 ```
 
 - migrate database:
