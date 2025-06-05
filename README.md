@@ -22,30 +22,35 @@ ____
 ____
 
 
-
+- install uv
+```shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 - install Python 3.8
-- install libs 
 ```shell
-      pip3 install -r requirements.txt
+uv python install 3.8
+```
+- pin Python version
+```shell
+uv python pin 3.8
 ```
 
-* Set environment export for variables:
+- Set environment export for variables (put them in .env file, for example):
 ```yaml
-      DJANGO_DB_HOST: db
-      DJANGO_DB_NAME: app
-      DJANGO_DB_USER: worker
-      DJANGO_DB_PASS: worker
-      DJANGO_DB_PORT: "5432"
-      DJANGO_DEBUG: "False"
+      DJANGO_DB_HOST=db
+      DJANGO_DB_NAME=app
+      DJANGO_DB_USER=worker
+      DJANGO_DB_PASS=worker
+      DJANGO_DB_PORT="5432"
+      DJANGO_DEBUG="False"
 ```
 
-
-* migrate database:
+- migrate database:
 ```shell
-python3 manage.py migrate
+uv run --env-file .env migrate
 ```
 
-* start application:
+- start application:
 ```shell
-python3 manage.py runserver 0.0.0.0:8000
+uv run --env-file .env manage.py runserver 0.0.0.0:8000
 ```

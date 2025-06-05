@@ -1,0 +1,12 @@
+[project]
+name = "devops-sample-django-app"
+version = "0.1.0"
+description = "Sample Python application on Django with PostgreSQL database."
+readme = "README.md"
+requires-python = ">=3.8, <3.9"
+dependencies = [
+    "django==4.0.1",
+    "django-prometheus==2.2.0",
+    "pillow==9.0.0",
+    "psycopg2-binary==2.9.3",
+]
