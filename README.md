@@ -11,16 +11,15 @@ Sample Python application on Django with PostgreSQL database.
 
 ____
 
-
 - django 4.0.1
 - Pillow 9.0.0
 - psycopg2-binary 2.9.3
 - django-prometheus 2.2.0
+- uwsgi
 
 <h3>Deployment</h3>
 
 ____
-
 
 - install uv
 ```shell
@@ -35,7 +34,7 @@ uv python install 3.8
 uv python pin 3.8
 ```
 
-- Set environment export for variables (put them in .env file, for example):
+- set environment export for variables (put them in .env file, for example):
 ```yaml
       DJANGO_DB_HOST=db
       DJANGO_DB_NAME=app
@@ -47,10 +46,10 @@ uv python pin 3.8
 
 - migrate database:
 ```shell
-uv run --env-file .env migrate
+make migrate
 ```
 
 - start application:
 ```shell
-uv run --env-file .env manage.py runserver 0.0.0.0:8000
+make run
 ```
