@@ -1,3 +1,5 @@
+.PHONY: all setup migrate run
+
 export UV_ENV_FILE = .env
 
 all: migrate run
